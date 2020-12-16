@@ -1,0 +1,329 @@
+/* ----------------------------- Czcionki -------------------------------- */
+@font-face {
+  font-family: roboto;
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url(./fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: roboto-light;
+  src: url(./fonts/Roboto-Light.ttf);
+}
+/* ------------------------- Zmienne ------------------------------*/
+:root {
+  --btn-color: #669933;
+  --roboto: roboto;
+  --roboto-light: roboto-light;
+  --roboto-medium: roboto-medium;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--roboto);
+}
+
+main {
+  margin: 40px;
+}
+
+.container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0px;
+  padding: 20px;
+  font-family: var(--roboto-light);
+  letter-spacing: 1.8px;
+  border: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+legend {
+  width: auto;
+  padding: 6px 18px;
+  letter-spacing: 4.5px;
+  font-family: var(--roboto-light);
+  color: #888888;
+  font-size: 20px;
+}
+
+/* -------------------- Style pola textowego -------------------- */
+.textInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.textareaInput:focus {
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(232, 174, 232, 1);
+  box-shadow: 0px 0px 6px 1px rgba(232, 174, 232, 1);
+  background-color: #fff;
+}
+
+.textareaInput {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-bottom: 8px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+/* ------------------- Style przycisków do wyboru kolorów --------------------*/
+[data-color="#336699"] {
+  background-color: #336699;
+}
+
+[data-color="#ffff00"] {
+  background-color: #ffff00;
+}
+
+[data-color="#ff6633"] {
+  background-color: #ff6633;
+}
+
+[data-color="#99cc33"] {
+  background-color: #99cc33;
+}
+
+[data-color="white"] {
+  background-color: white;
+}
+/*
+* --------- BORDER POLA TEXTAREA ----------
+*/
+[data-border="#336699"] {
+  border: 1px solid #336699;
+}
+
+[data-border="#ffff00"] {
+  border: 1px solid #ffff00;
+}
+
+[data-border="#ff6633"] {
+  border: 1px solid #ff6633;
+}
+
+[data-border="#99cc33"] {
+  border: 1px solid #99cc33;
+}
+
+[data-border="white"] {
+  border: 1px solid white;
+}
+
+.pickColorForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.pickColor {
+  border: 1px solid #bebdbd;
+  margin: 0px 6px;
+  padding: 5px;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+/* -------------------------- Style przycisków dodaj --------------------------- */
+.addBtn {
+  background-color: #fff;
+  border: 1px solid var(--btn-color);
+  font-family: var(--roboto-medium);
+  color: var(--btn-color);
+  width: 60px;
+  height: 24px;
+}
+.addBtn:hover {
+  background-color: var(--btn-color);
+  color: #fff;
+  -webkit-transition: 0.15s linear;
+  -o-transition: 0.15s linear;
+  transition: 0.15s linear;
+}
+.addBtn:hover .plusSign {
+  color: #fff;
+}
+.plusSign {
+  color: var(--btn-color);
+}
+
+/* -------------------------- Pole akapitu 'label' do pola wybór pracownika ----------------------- */
+.micContainer {
+  width: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoFor {
+  margin-right: 5px;
+  padding-top: 5px;
+  font-size: 14px;
+  color: #888888;
+}
+.mic {
+  width: 70%;
+  height: auto;
+  color: #888888;
+  padding: 10px;
+}
+/* -------------------------- Style do pola wyboru pracownika 'SELECT' ------------------------------ */
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 200px;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 4px 8px;
+  outline: 0;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  background: #f2f2f2;
+  color: #7b7b7b;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: var(--roboto);
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #7b7b7b;
+  background: #e4e4e4;
+}
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.select_arrow {
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  width: 4px;
+  height: 4px;
+  border: solid #7b7b7b;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+  border-color: #7b7b7b;
+}
+.select select:disabled ~ .select_arrow {
+  border-top-color: #cccccc;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #cccccce7;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip .tooltiptext {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin: 10px 0 0 0;
+  margin-left: -60px;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #cccccce7 transparent;
+}
+
+#pdfConvert {
+  background-color: #fff;
+  border: 1px solid var(--btn-color);
+  font-family: var(--roboto-medium);
+  color: var(--btn-color);
+  margin: auto 10px;
+  padding: 5px 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.pdfBtnWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#pdfConvert:hover {
+  background-color: var(--btn-color);
+  color: #fff;
+  -webkit-transition: 0.15s linear;
+  -o-transition: 0.15s linear;
+  transition: 0.15s linear;
+}
